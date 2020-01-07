@@ -4,16 +4,26 @@ using UnityEngine.UI;
 
 public class Jasmine : MonoBehaviour
 {
-    public int speed = 50;
-    public float jump = 2.5f;
+    public int speed = 6;
+    public float jump = 175f;
     public string JasmineName = "Jasmine";
     public bool pass = false;
     public bool isGround;
+    [Header("血量"), Range(0, 200)]
+    public float hp = 100;
+
+    public UnityEvent onEat;
+    public GameObject final;
+
+    private float hpMax;
+
+    public UnityEvent onEat;
 
     private Rigidbody2D r2d;
     private void Start()
     {
         r2d = GetComponent<Rigidbody2D>();
+        hpMax = hp;
     }
     private void Update()
     {
@@ -31,6 +41,15 @@ public class Jasmine : MonoBehaviour
     {
         isGround = true;
         Debug.Log("碰到了" + collision.gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "LifeTree")
+        {
+            Destroy(collision.gameObject);  // 刪除
+            onEat.Invoke();                 // 呼叫事件
+        }
     }
 
     /// <summary>
@@ -61,4 +80,15 @@ public class Jasmine : MonoBehaviour
     {
         transform.eulerAngles = new Vector3(0, direction, 0);
     }
-}
+
+    public void Damage(float damage)
+    {
+        hp -= damage;
+        hpBar.fillAmount = hp / hpMax;
+
+        if (hp <= 0)
+        {
+            final.SetActive(true);
+            Destroy(this);
+        }
+    }

@@ -21,7 +21,7 @@ public class npc : MonoBehaviour
     [Header("任務相關")]
     public bool missingcomplete;
     public int countPlayer;
-    public int countFinish = 10;
+    public int countFinish = 1;
 
     [Header("介面")]
     public GameObject objCanvas;

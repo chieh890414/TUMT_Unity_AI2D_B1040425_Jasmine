@@ -7,6 +7,8 @@ TagManager:
   - Saw
   - Jasmine
   - npc
+  - LifeTree
+  - chomper
   layers:
   - Default
   - TransparentFX
