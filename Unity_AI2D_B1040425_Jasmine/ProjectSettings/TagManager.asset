@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Saw
   - Jasmine
+  - npc
   layers:
   - Default
   - TransparentFX
