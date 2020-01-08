@@ -5,7 +5,7 @@ public class GM : MonoBehaviour
 {
     public void Replay()
     {
-        SceneManager.LoadScene("scene");
+        SceneManager.LoadScene("SampleScene");
     }
     public void Quit()
     {

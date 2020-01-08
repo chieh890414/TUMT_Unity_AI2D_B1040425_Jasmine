@@ -52,7 +52,12 @@ public class Jasmine : MonoBehaviour
             Destroy(collision.gameObject);
             onEat.Invoke();
         }
+        if (collision.tag == "trap")
+        {
+            final.SetActive(true);
+        }
     }
+
 
     /// <summary>
     /// 走路

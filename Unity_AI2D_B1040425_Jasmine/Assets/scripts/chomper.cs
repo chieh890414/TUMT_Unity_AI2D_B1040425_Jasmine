@@ -6,7 +6,7 @@ public class chomper : MonoBehaviour
     public float speed = 1.5f;
 
     [Header("傷害"), Range(0, 100)]
-    public float damage = 33;
+    public float damage = 20;
 
     public Transform checkpoint;
 
@@ -26,7 +26,7 @@ public class chomper : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawRay(checkpoint.position, -checkpoint.up * 2);
+        Gizmos.DrawRay(checkpoint.position, -checkpoint.up * 1);
     }
 
 

@@ -9,6 +9,7 @@ TagManager:
   - npc
   - LifeTree
   - chomper
+  - trap
   layers:
   - Default
   - TransparentFX
