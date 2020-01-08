@@ -35,13 +35,10 @@ public class chomper : MonoBehaviour
     ///</summary>
     private void Move()
     {
-        //r2d.AddForce(new Vector2(-speed, 0)); 世界座標
-        r2d.AddForce(-transform.right * speed); // 區域座標 2D transform.right 右邊 transform.up 上方
+        r2d.AddForce(-transform.right * speed);
 
-        //碰撞資訊 = 物理.射線碰撞
-        RaycastHit2D hit = Physics2D.Raycast(checkpoint.position, -checkpoint.up, 1.5f, 1 << 8);
+        RaycastHit2D hit = Physics2D.Raycast(checkpoint.position, -checkpoint.up, 2f, 1 << 8);
 
-        //print(hit.collider.gameObject);
 
         if (hit == false)
         {
