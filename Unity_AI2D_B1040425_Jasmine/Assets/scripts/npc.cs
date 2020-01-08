@@ -11,9 +11,9 @@ public class npc : MonoBehaviour
     public state _state;
 
     [Header("對話內容")]
-    public string saystart = "嗨囉Jasmine 妳需要玩成任務!";
-    public string saynotcomplete = "還沒完成哦!";
-    public string saycomplete = "恭喜妳過關!";
+    public string saystart = "嗨囉Jasmine! 妳現在要去尋找傳說中的生命樹 這是妳的宿命";
+    public string saynotcomplete = "生命樹呢?";
+    public string saycomplete = "妳終於成功了 現在妳將成為新的生命樹守護神";
 
     [Header("對話速度")]
     public float speed = 0.01f;

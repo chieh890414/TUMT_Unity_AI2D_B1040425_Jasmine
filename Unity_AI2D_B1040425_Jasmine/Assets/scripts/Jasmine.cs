@@ -17,7 +17,7 @@ public class Jasmine : MonoBehaviour
 
     private float hpMax;
 
-    public UnityEvent onEat;
+    public Image hpBar;
 
     private Rigidbody2D r2d;
     private void Start()
@@ -47,8 +47,8 @@ public class Jasmine : MonoBehaviour
     {
         if (collision.tag == "LifeTree")
         {
-            Destroy(collision.gameObject);  // 刪除
-            onEat.Invoke();                 // 呼叫事件
+            Destroy(collision.gameObject);
+            onEat.Invoke();
         }
     }
 
@@ -92,3 +92,4 @@ public class Jasmine : MonoBehaviour
             Destroy(this);
         }
     }
+}

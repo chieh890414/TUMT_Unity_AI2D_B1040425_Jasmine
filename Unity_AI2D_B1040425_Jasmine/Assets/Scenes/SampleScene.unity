@@ -1852,6 +1852,7 @@ MonoBehaviour:
   JasmineName: Jasmine
   pass: 0
   isGround: 0
+  hp: 100
   onEat:
     m_PersistentCalls:
       m_Calls:
@@ -1866,6 +1867,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  final: {fileID: 1396846364}
+  hpBar: {fileID: 626207587}
 --- !u!1 &1459384868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,9 +2085,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _state: 0
-  saystart: "\u55E8\u56C9Jasmine \u59B3\u9700\u8981\u73A9\u6210\u4EFB\u52D9!"
-  saynotcomplete: "\u9084\u6C92\u5B8C\u6210\u54E6!"
-  saycomplete: "\u606D\u559C\u59B3\u904E\u95DC!"
+  saystart: "\u55E8\u56C9Jasmine! \u59B3\u73FE\u5728\u8981\u53BB\u5C0B\u627E\u50B3\u8AAA\u4E2D\u7684\u751F\u547D\u6A39
+    \u9019\u662F\u59B3\u7684\u5BBF\u547D"
+  saynotcomplete: "\u751F\u547D\u6A39\u5462?"
+  saycomplete: "\u59B3\u7D42\u65BC\u6210\u529F\u4E86 \u73FE\u5728\u59B3\u5C07\u6210\u70BA\u65B0\u7684\u751F\u547D\u6A39\u5B88\u8B77\u795E"
   speed: 0.01
   missingcomplete: 0
   countPlayer: 0
@@ -2312,7 +2316,7 @@ Transform:
   m_Children:
   - {fileID: 888580379}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2070434940
 Rigidbody2D:
@@ -2347,6 +2351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe2fc20666b3d04dbfa2b2d454ae46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1.5
+  damage: 33
+  checkpoint: {fileID: 1455200056}
 --- !u!1001 &7982075503496769554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2397,7 +2404,7 @@ PrefabInstance:
     - target: {fileID: 7982075503053419817, guid: 466166702273d61478d355db1bda3242,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7982075503053419817, guid: 466166702273d61478d355db1bda3242,
         type: 3}

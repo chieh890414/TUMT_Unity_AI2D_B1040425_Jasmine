@@ -6,7 +6,7 @@ public class chomper : MonoBehaviour
     public float speed = 1.5f;
 
     [Header("傷害"), Range(0, 100)]
-    public float damage = 35;
+    public float damage = 33;
 
     public Transform checkpoint;
 
